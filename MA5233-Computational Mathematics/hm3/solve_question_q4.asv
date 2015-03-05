@@ -1,0 +1,7 @@
+function solve_question_q4()
+N = 100; a=0;b=10;k=(b-a)/N;
+fxy = @(x,y,t)(2*x + y^2 + t*exp(t) - t);
+x0=1;y0=0;
+out_y = zeros(N,1); out_y(1) = y0;
+out_x = zeros(N,1); out_x(1) = x0;
+for i=2:N

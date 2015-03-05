@@ -1,0 +1,53 @@
+README
+=======================================================================
+Incremental and decremental support vector machine learning
+Matlab code, data and demos
+G. Cauwenberghs
+gert@ucsd.edu
+=======================================================================
+
+This directory contains Matlab code, data files, and example demos for
+incremental SVM classification, including exact leave-one-out (LOO)
+cross-validation.  The file incremental.tar.gz contains the entire
+gzipped, tarred directory.
+
+To start, run test_2d or test_diabetes at the Matlab prompt.  Make
+sure to have all *.m and *.mat files in your directory.  Use the
+Matlab "help" function to find syntax and more information on the
+implemented functions.  Some of the parameters are available as global
+variables in the workspace (see test*.m for examples).
+
+This software is in the public domain; there are no implied warranties
+of any kind!  Send bug reports to gert@ucsd.edu
+
+Matlab functions and scripts:
+-----------------------------
+svcm_*.m     support vector classification machine
+kernel.m     kernel function used in svcm_*.m
+test*.m      example demo scripts
+Set*.m       graphics formatting
+gen*.m       data generating functions
+
+Matlab data:
+------------
+*.mat        vectors x [L,N], and labels y [L,1] (-1 or 1)
+
+Sample output:
+--------------
+*.eps        encapsulated PostScript
+
+Reference:
+----------
+G. Cauwenberghs and T. Poggio, "Incremental and Decremental Support
+Vector Machine Learning," in Adv. Neural Information Processing
+Systems (NIPS*2000), Cambridge MA: MIT Press, vol. 13, 2001.
+(http://www.biology.ucsd.edu/~gert/papers/nips00_inc.pdf)
+
+Other incremental SVM code:
+---------------------------
+SVM incremental on-line classification, LOO evaluation, and
+hyperparameter optimization (Chris Diehl):
+http://www.cpdiehl.org/incrementalSVM.html
+
+SVM incremental on-line regression (Francesco Parrella):
+http://onlinesvr.altervista.org/

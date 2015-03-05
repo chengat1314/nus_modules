@@ -1,0 +1,14 @@
+function out = mindist(dist1,i)
+% dist1=[4,0,3,1,5];i=2
+n = length(dist1);
+temp = dist1(1);
+k = 1;
+for j = 1:dist1
+    if(j~=i)
+        if(dist1(j)<temp)
+            temp = dist1(j);
+            k = j;
+        end
+    end
+end
+out = k;

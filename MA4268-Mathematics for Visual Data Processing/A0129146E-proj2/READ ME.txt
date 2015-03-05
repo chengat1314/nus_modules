@@ -1,0 +1,13 @@
+Submissions files:
+1.imshift.m 
+Finds the translation between the registration image I and the template T, 
+returning the translation parameter SHIFT=[x,y].
+
+2.demo.m
+Show The results of testing data and all related codes.
+When the input picture is image_of_template.png and image_for_alignment.png,
+then the shift =[13,10]
+
+3.cross-power-spectrum.png
+plot the absolute values of the cross power spectrum.
+

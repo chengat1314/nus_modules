@@ -1,0 +1,24 @@
+function homework3_2()
+%% Facial Image Based Glasses Wearing Recognition 
+% Apply the Rosenblatt’s perceptron (single layer perceptron) 
+
+clc,clear;
+[trainB1,trainB2,testB1,testB2]= readimg();
+size(trainB1),size(trainB2),size(testB1),size(testB2)
+
+P = [trainB1,trainB2];
+T = [ones(1,50),zeros(1,50)];
+size(P),size(T)
+net = newff(P,T,1,{'purelin'},'traincgf');
+net.trainParam.epochs = 1000; 
+net = train(net,P,T);
+view(net);close all
+trainresult = sim(net,P);
+trainer = threshold(trainresult);
+sum(trainer==T)/length(trainer)
+%% test 
+PP = [testB1,testB2];
+TT = [ones(1,15),zeros(1,15)];
+testresult = sim(net,PP);
+tester = threshold(testresult);
+sum(tester==TT)/length(tester)
