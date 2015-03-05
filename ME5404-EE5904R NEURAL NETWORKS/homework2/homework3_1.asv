@@ -1,0 +1,15 @@
+function homework3_1()
+%% Facial Image Based Glasses Wearing Recognition 
+% Apply the Rosenblatt’s perceptron (single layer perceptron) 
+clc,clear;close all
+n=10;times =10;
+train_error = zeros(times,n);
+test_error = zeros(times,n);
+for i = 1:times
+    error =  single_perceptron();
+    train_error(i,1) = error(1);
+    test_error(i,2) = error(2);
+end
+plot(train_error(:,1),'*-');hold on
+plot(mean(test_error),'o-');legend('train error','test error');
+xlabel('n');ylabel('mse');title('training error plot');

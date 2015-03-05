@@ -1,0 +1,10 @@
+FFT time cost for my function:Elapsed time is 0.098480 seconds.
+IFFT time cost for my function:Elapsed time is 0.141271 seconds.
+
+FFT time cost for system function:Elapsed time is 0.008070 seconds.
+IFFT time cost for system function:Elapsed time is 0.014201 seconds.
+
+
+1. we should do extension when the dimension of the image is not 2^m.
+2. use the butterfly formuler, change the order first.
+3. caculate the exp(-2*pi*i*t/2^N) just one time and save it in the memory.
