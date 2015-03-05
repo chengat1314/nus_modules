@@ -1,8 +1,0 @@
-function homework4_q19()
-%% kmeans
-clc,clear;
-data = load('D:/hw4_kmeans_train.dat');
-[m,n]=size(data);
-k = 2;
-[idx,C] = kmeans(data,k)
-mean(data(idx,:))

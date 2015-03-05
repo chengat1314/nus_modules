@@ -1,5 +1,0 @@
-function out = mindist(dist1,i)
-n = length(dist1);
-temp = dist1(1);
-for j = 1:dist1
-    if(j)
