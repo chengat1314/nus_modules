@@ -22,6 +22,6 @@ end
 v=sum(x)/n; 
 se = sqrt((sum(x.^2) - n*v^2)/n/(n-1));  % estimate of the standard error
 
-fprintf('\n v=%8.4e, se=%8.4e\n',v, se);
+fprintf(' \n v=%8.4e, se=%8.4e\n',v, se);
 
 
